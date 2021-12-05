@@ -7,12 +7,10 @@ const Profile = ({userName, name}) => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.textBox}>
-        {userName}({name})
-      </Text>
+      <Text style={styles.textBox}>{`${userName} X ${name}`}</Text>
       <Text style={styles.textBox}>{msg}</Text>
-      <Greeting title="Bye!" onPress={() => setMsg('Seeya!')} />
-      <Greeting title="Hello!" onPress={() => setMsg('Welcome!')} />
+      <Greeting title="Bye!" onPress={() => setMsg('잘가!')} />
+      <Greeting title="Hello!" onPress={() => setMsg('컴온!')} />
     </View>
   );
 };

@@ -3,10 +3,10 @@ import {StyleSheet, View} from 'react-native';
 
 import Profile from './src/Profile';
 
-const App = () => {
+const App = ({userName, name}) => {
   return (
     <View style={styles.container}>
-      <Profile userName={'samslow'} name={'서현석'} />
+      <Profile userName={userName || '액션가면'} name={name || '짱구'} />
     </View>
   );
 };

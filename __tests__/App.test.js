@@ -3,18 +3,10 @@ import {render} from '@testing-library/react-native';
 
 import App from '../App';
 
-function getTempComponent(props) {
-  return <App {...props} />;
-}
-
-let props;
-let component;
-
 describe('[App] render', () => {
-  props = {};
-  component = getTempComponent(props);
-  test('renders witout crashing', () => {
-    const rendered = render(component);
+  const props = {userName: '액션가면', name: '짱구'};
+  test('renders correctly', () => {
+    const rendered = render(<App {...props} />);
     expect(rendered).toMatchSnapshot(); // 기존스냅샷과 일치하는지.
     expect(rendered).toBeTruthy(); // 컴포넌트가 null, undefined와 같은 falsy한 값을 가지는지
   });

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`[App] render renders witout crashing 1`] = `
+exports[`[App] render renders correctly 1`] = `
 <View
   style={
     Object {
@@ -24,10 +24,7 @@ exports[`[App] render renders witout crashing 1`] = `
         }
       }
     >
-      samslow
-      (
-      서현석
-      )
+      액션가면 X 짱구
     </Text>
     <Text
       style={
