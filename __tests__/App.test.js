@@ -5,16 +5,17 @@ import App from '../App';
 
 describe('[App] render', () => {
   const props = {userName: '액션가면', name: '짱구'};
-  const rendered = render(<App {...props} />);
 
   test('renders correctly', () => {
+    const rendered = render(<App {...props} />);
     expect(rendered).toMatchSnapshot(); // 기존스냅샷과 일치하는지.
     expect(rendered).toBeTruthy(); // 컴포넌트가 null, undefined와 같은 falsy한 값을 가지는지
   });
 
-  // test('should have default userName', () => {
-  //   const rendered = render(<App />);
-  // });
+  test('should have default userName', () => {
+    const rendered = render(<App />);
+    rendered.getByText(/액션가면/);
+  });
 });
 
 /**
